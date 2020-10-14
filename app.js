@@ -17,12 +17,12 @@
             } else {
                 $scope.checked = true;
                 $scope.empty = false;
-                var arrayDishes = $scope.dishes.split(',');
-                var arrayDishesWithoutEmptys = arrayDishes.filter(function(v) {
+                var aDishes = $scope.dishes.split(',');
+                var aDishesWoEmptys = aDishes.filter(function(v) {
                     return v.trim() !== '';
                 });
 
-                if (arrayDishesWithoutEmptys.length <= 3) {
+                if (aDishesWoEmptys.length <= 3) {
                     $scope.message = 'Enjoy!';
                 } else {
                     $scope.message = 'Too much!';
